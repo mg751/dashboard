@@ -1,0 +1,265 @@
+/* * {
+    outline: 1px solid rgba(0, 255, 0, 0.375);
+} */
+
+
+
+
+:root {
+    --light-bg: #F5B6891F;
+    --dark-bg: #a62b2bda;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+html {
+    background-color: var(--light-bg);
+    margin: 0;
+}
+
+.nav-section *,
+.user-actions a {
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.raids-section img {
+    width: 50px;
+    height: 50px;
+    grid-area: raid;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+    "nav header header"
+    "nav main right-main"
+    "nav main right-main";
+    grid-template-columns: minmax(200px, 1fr) 4fr 1.5fr;
+    grid-template-rows: 170px 1fr 1fr;
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+}
+
+.nav-section {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--dark-bg);
+    padding-left: 0.75rem;
+    margin: 0;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    justify-content: space-around;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.331);
+}
+
+main {
+    grid-area: main;
+    padding: 0;
+    margin: 0;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+
+
+.right-main {
+    grid-area: right-main;
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.user-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.user-actions a {
+    border: 1px solid var(--dark-bg);
+    background-color: var(--dark-bg);
+    border-radius: 15px;
+    width: 80px;
+    text-align: center;
+    padding: 5px 0px;
+    text-decoration: none;
+}
+
+.trending-section > p,
+.announcements-section > p,
+.raids-section > p,
+.raid-title,
+.user-card,
+.user-actions a {
+    font-weight: 500;
+}
+
+.nav-section * {
+    font-weight: 500;
+}
+
+.logo p {
+    font-weight: 600;
+}
+
+.user-name {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.trending-section {
+    grid-area: trending;
+}
+
+.announcements-section {
+    grid-area: announcement;
+}
+
+.announcements-cards,
+.trending-cards,
+.raid-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.331);
+}
+
+.announcements-card,
+.trending-card {
+    display: flex;
+    align-items: center;
+}
+
+.trending-cards p {
+    margin: 0;
+}
+
+.trending-card {
+    gap: 20px;
+}
+
+.user-handle {
+    font-weight: 400;
+}
+
+.trending-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.trending-card div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.raids-section {
+    margin: 15px 15px 0px 15px;
+}
+
+.upper-header,
+.lower-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0rem 1rem;
+}
+
+.upper-header-left {
+    width: clamp(120px, 30dvw, 500px);
+}
+
+.upper-header-left,
+.upper-header-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.upper-header-right a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+.upper-header-left {
+    margin-left: 1rem;
+}
+
+.upper-header-left input {
+    width: 100%;
+    background-color: rgba(211, 211, 211, 0.241);
+    border-radius: 10px;
+}
+
+.upper-header-right {
+    margin-right: 1rem;
+}
+
+.user-card {
+    display: flex;
+    gap: 20px;
+}
+
+.raid-card {
+    border-left: 5px solid goldenrod;
+}
+
+.raids-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.toplinks,
+.bottomlinks {
+    margin-left: 1rem;
+}
+
+.toplinks > ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.toplinks ol li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bottomlinks div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.raid-icons img {
+    width: 25px;
+    height: 25px;
+}
+
+.raid-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
